@@ -28,19 +28,22 @@
                 </div>
             </div>
         </div>
-
-            <form class="login-wrapper">
-                <h1>Welcome back!</h1>
-                <div class="email">
-                    <input class="input" type="email" id="email" placeholder="e-mail">
-                </div>
-                <div class="password">
-                    <input class="input" type="password" placeholder="password">
-                </div>
-                <h1 id="login-btn">LOGIN</h1>
-                <h1 id="registerhere">Don't have an account yet? Register <u id="register-instead-btn"><i>here</i></u></h1>
-            </form>
-
+        
+        <form class="login-wrapper">
+            <h1>Welcome back!</h1>
+            <div class="form-input">
+                <input class="input" type="email" id="email" placeholder=" " required>
+                <label class="form-label" for="email">e-mail</label>
+                
+            </div>
+            <div id="password" class="form-input">
+                <input class="input" type="password" placeholder=" " required>
+                <label class="form-label" for="password">password</label>
+            </div>
+            <h1 id="login-btn">LOGIN</h1>
+            <h1 id="registerhere">Don't have an account yet? Register <a href="register.html"><u id="register-instead-btn"><i>here</i></u></a></h1>
+        </form>
     </div>
+    
 </body>
 </html>

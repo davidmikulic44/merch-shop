@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;700&display=swap');
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -16,8 +18,8 @@ body {
     background-color: black;
     color: white;
     max-width: 100%;
-    overflow-x: hidden;
-    
+    margin: 0;
+    overflow: hidden;
 }
 
 p {
@@ -29,7 +31,7 @@ p {
     flex-direction: column;
     max-width: 1920px;
     margin: auto;
-    height: 100%;
+    height: 1080px;
     overflow: auto;
     text-align: center;
 }
@@ -91,31 +93,38 @@ p {
     align-items: center;
 }
 
+label {
+    font-size: 36px;
+}
 
 input {
-    height: 44px;
+    height: 64px;
     width: 500px;
     font-size: 26px;
     font-family: inherit;
     font-weight: 400;
-    border-radius: 50px;
     padding: 10px;
     outline: none;
     border: none;
     display: block;
-    background-color: rgba(255,255,255,0.07);
-    border-radius: 3px;
+    background: none;
+    border: 2px #fff solid;
+    color: #fff;
+    border-radius: 10px;
     padding: 0 10px;
+    transition: all 0.2s ease;
 }
 
 
-input:focus {
+
+.input:focus {
     text-align: left;
     transition: 0.1s ease;
+    color: white;
+    border-color:#5DFF54;
 }
-::placeholder{
-    color: #e5e5e5;
-}
+
+
 
 #login-btn {
     width: fit-content;
@@ -143,12 +152,12 @@ input:focus {
 }
 
 form{
-    height: 400px;
+    height: 520px;
     width: 600px;
-    background-color: rgba(255,255,255,0.13);
-    position: absolute;
+    background-color: #000;
     transform: translate(-50%,-50%);
-    top: 50%;
+    position: absolute;
+    top: 40%;
     left: 50%;
     border-radius: 10px;
     backdrop-filter: blur(10px);
@@ -156,11 +165,43 @@ form{
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
     margin: 0 auto;
+    z-index: -20;
 }
 
-label{
+.form-input {
+    position: relative;
+}
+
+.input:focus ~ .form-label{
+    font-size: 14px;
+    bottom: 55px;
+    z-index: 30;
+}
+
+.input:not(:placeholder-shown) ~ .form-label{
+    font-size: 14px;
+    bottom: 55px;
+    z-index: 30;
+}
+
+
+
+.form-input:hover input {
+    border-color:#a1ff9c;
+}
+
+.form-label{
     display: block;
     margin-top: 30px;
     font-size: 16px;
     font-weight: 700;
+    position: absolute;
+    bottom: 18px;
+    background-color: #000;
+    padding: 5px;
+    cursor: text;
+    left: 10px;
+    user-select: none;
+    z-index: -19;
+    transition: all 0.2s ease-in-out;
 }

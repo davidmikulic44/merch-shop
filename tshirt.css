@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    max-width: 1920px;
+    font-family: 'Inter', 'sans-serif';
+    background-color: black;
+    color: white;
+    max-width: 100%;
+    margin: 0;
+}
+
+p {
+    font-family: 'Courier Prime', 'sans-serif';
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+    margin: auto;
+    height: 1080px;
+    text-align: center;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    max-width: 1920px;
+    height: 65px;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    z-index: 100;
+    border: 1px solid white;
+    border-style: none none solid none;
+    
+}
+
+.header-title {
+    gap:10px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    white-space: nowrap
+}
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 172px;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 1920px;
+}
+
+.green-icon {
+    color:#5DFF54;
+}
+
+.login-register {
+    display: flex;
+    gap: 10px;
+    margin-right: 30px;
+}
+
+.login-register-text {
+    padding: 10px;
+    font-weight: 700;
+}
+
+.login-register-text:hover {
+    background-color: white;
+    color: black;
+    transition: 0.2s linear;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.image-link {
+    height: 36px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.image-link:hover {
+    filter: invert(1);
+    transition: 0.2s linear;
+    background-color: black;
+}
+
+.spotify-link {
+    width: fit-content;
+    height: 88px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+
+}
+
+.spotify-image {
+    height: 64px;
+    width: auto;
+}
+
+.spotify-title {
+    font-size: 20px;    
+}
+
+.spotify-description {
+    color: #cacaca;
+    font-size:  10px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.footer-text {
+    font-size: 16px;
+}

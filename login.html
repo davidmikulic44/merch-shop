@@ -30,20 +30,23 @@
         </div>
         
         <form class="login-wrapper">
+            <div id="circle1" class="circle"></div>
             <h1>Welcome back!</h1>
+            
+
             <div class="form-input">
-                <input class="input" type="email" id="email" placeholder=" " required>
-                <label class="form-label" for="email">e-mail</label>
+                <input class="input" type="e-mail" id="e-mail" placeholder=" " required>
+                <label class="form-label" for="e-mail">e-mail</label>
                 
             </div>
-            <div id="password" class="form-input">
-                <input class="input" type="password" placeholder=" " required>
+            <div class="form-input">
+                <input class="input" id="password" type="password" placeholder=" " required>
                 <label class="form-label" for="password">password</label>
             </div>
-            <h1 id="login-btn">LOGIN</h1>
+            <input type="submit" value="LOGIN" class="login-signup-button">
             <h1 id="registerhere">Don't have an account yet? Register <a href="register.html"><u id="register-instead-btn"><i>here</i></u></a></h1>
         </form>
     </div>
-    
+    <script src="circlemovement.js"></script>
 </body>
 </html>

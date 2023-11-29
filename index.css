@@ -1,7 +1,14 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;700&display=swap');
 * {
     margin: 0;
 }
+
+::-moz-selection, ::selection { /* Code for Firefox */
+    color: white;
+    background: #079100;
+}
+
 
 a {
     text-decoration: none;

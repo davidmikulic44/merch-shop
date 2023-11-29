@@ -5,11 +5,6 @@
     box-sizing: border-box;
 }
 
-::-moz-selection, ::selection { /* Code for Firefox */
-    color: white;
-    background: #079100;
-}
-
 a {
     text-decoration: none;
     color: white;
@@ -123,7 +118,15 @@ input {
 
 
 
+#names {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 
+.name {
+    width: 240px;
+}
 
 
 
@@ -141,8 +144,8 @@ input {
 
 #register-instead-btn {
     color: #5DFF54;
+    transition: all 0.2s ease-in-out;
 }
-
 
 #register-instead-btn:hover {
     color: #a9ffa4;
@@ -159,12 +162,11 @@ input {
 }
 
 form{
-    height: 620px;
+    height: 700px;
     width: 600px;
     background-color: #000;
-    
     position: absolute;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
@@ -222,6 +224,11 @@ form{
     transition: all 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-height: 1000px) {
     
+}
+
+::-moz-selection, ::selection { /* Code for Firefox */
+    color: white;
+    background: #079100;
 }

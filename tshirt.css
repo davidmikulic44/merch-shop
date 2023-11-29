@@ -111,7 +111,10 @@ footer {
     filter: invert(1);
     transition: 0.2s linear;
     background-color: black;
+
 }
+
+
 
 .spotify-link {
     width: fit-content;
@@ -195,12 +198,25 @@ footer {
     transition: all 0.2s ease-in-out;
 }
 
+@keyframes BigToSmall {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .bottom-image.active {
     opacity: 1;
 }
 
 .bottom-image:hover {
     opacity: 1;
+    animation: BigToSmall 0.2s;
 }
 
 .overlay {
@@ -385,4 +401,18 @@ footer {
     border: 2px solid #5DFF54;
     color: black;
     transition: 0.1s;
+}
+
+
+@media screen and (max-width: 1000px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding-bottom: 10px;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+
 }

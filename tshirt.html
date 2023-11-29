@@ -28,11 +28,13 @@
 
         <div class="tshirt-container">
             <div class="tshirt-images">
-                <img src="assets/images/girlslovesbl.jpg" alt="" class="front-image">
+
+                <img src="assets/images/girlslovesbl.jpg" alt="" id="front-image">
+
                 <div id="bottom-images">
-                    <img src="assets/images/girlslovesbl.jpg" alt="" class="bottom-image">
-                    <img src="assets/images/girlslovesbl1.jpeg" alt="" class="bottom-image">
-                    <img src="assets/images/girlslovesbl2.jpeg" alt="" class="bottom-image">
+                    <img src="assets/images/girlslovesbl.jpg" alt="" class="bottom-image" onclick="replaceImage(this)">
+                    <img src="assets/images/girlslovesbl1.jpeg" alt="" class="bottom-image" onclick="replaceImage(this)">
+                    <img src="assets/images/girlslovesbl2.jpeg" alt="" class="bottom-image" onclick="replaceImage(this)">
                 </div>
             </div>
             <div class="tshirt-info">
@@ -93,5 +95,7 @@
 
         </footer>
     </div>
+
+    <script src="tshirt.js"></script>
 </body>
 </html>

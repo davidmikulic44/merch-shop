@@ -35,7 +35,6 @@ p {
     flex-direction: column;
     max-width: 1920px;
     margin: auto;
-    height: 1080px;
     text-align: center;
 }
 .header {
@@ -155,12 +154,11 @@ footer {
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
-    height: 1080px;
+    flex-wrap:wrap;
     justify-content: center;
     align-items: center;
     gap: 50px;
     max-width: 80%;
-    max-height: 80%;
     margin: 100px auto 100px;
 }
 
@@ -176,19 +174,32 @@ footer {
 #bottom-images {
     display: flex;
     flex-direction: row;
-    
     gap: 10px;
 }
 
-.front-image {
-    height: 600px;
+#front-image {
+    height: 500px;
     border-radius: 10px;
+    width: 400px;
+    object-fit: cover;
 }
 
 .bottom-image {
-    height: 120px;
-    object-fit: contain;
+    height: 100px;
+    object-fit: cover;
+    width: 80px;
     border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.2s ease-in-out;
+}
+
+.bottom-image.active {
+    opacity: 1;
+}
+
+.bottom-image:hover {
+    opacity: 1;
 }
 
 .form-input {
@@ -229,7 +240,7 @@ footer {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 1px solid #fff; /* Default border */
+    border: 2px solid #fff; /* Default border */
     background-color: #d9d9d9; /* Default background */
     position: absolute;
     top: 50%;
@@ -260,7 +271,7 @@ footer {
 /* Selected styles */
 .sizes input[type="radio"]:checked + label::before {
     background-color: #000; /* Selected background */
-    border: 2px solid #5DFF54; /* Selected border */
+    border: 3px solid #5DFF54; /* Selected border */
 }
 
 .sizes input[type="radio"]:checked + label span {
@@ -314,14 +325,15 @@ footer {
 }
 
 .login-signup-button:hover {
-    background-color: #fff;
+    background-color: #000;
     border: 2px solid #5DFF54;
-    color: black;
+    color: #fff;
+    cursor: pointer;
 }
 
 .login-signup-button:active {
     background-color: #C5FFC1;
     border: 2px solid #5DFF54;
     color: black;
-    transition: 0s;
+    transition: 0.1s;
 }

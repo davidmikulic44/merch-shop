@@ -26,3 +26,14 @@ function replaceImage(clickedImage) {
     // Add 'active' class to the clicked bottom image
     clickedImage.classList.add('active');
 }
+function openModal() {
+    var frontImage = document.getElementById('front-image');
+    var modalImage = document.getElementById('modal-image');
+
+    modalImage.src = frontImage.src;
+    document.getElementById('overlay').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('overlay').style.display = 'none';
+}

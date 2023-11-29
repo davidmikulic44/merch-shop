@@ -29,12 +29,18 @@
         <div class="tshirt-container">
             <div class="tshirt-images">
 
-                <img src="assets/images/girlslovesbl.jpg" alt="" id="front-image">
+                <img src="assets/images/girlslovesbl.jpg" onclick="openModal()" alt="" id="front-image">
 
                 <div id="bottom-images">
                     <img src="assets/images/girlslovesbl.jpg" alt="" class="bottom-image" onclick="replaceImage(this)">
                     <img src="assets/images/girlslovesbl1.jpeg" alt="" class="bottom-image" onclick="replaceImage(this)">
                     <img src="assets/images/girlslovesbl2.jpeg" alt="" class="bottom-image" onclick="replaceImage(this)">
+                </div>
+            </div>
+            <div id="overlay" class="overlay" onclick="closeModal()">
+                <div class="modal">
+                    <span class="close-btn" onclick="closeModal()"><i class="fas fa-window-close"></i></span>
+                    <img src="" alt="Large Image" id="modal-image">
                 </div>
             </div>
             <div class="tshirt-info">

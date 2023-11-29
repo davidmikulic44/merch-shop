@@ -29,14 +29,18 @@
         <div class="tshirt-container">
             <div class="tshirt-images">
                 <img src="assets/images/girlslovesbl.jpg" alt="" class="front-image">
-                <img src="assets/images/girlslovesbl.jpg" alt="" class="bottom-image">
-                <img src="assets/images/girlslovesbl1.jpeg" alt="" class="bottom-image">
-                <img src="assets/images/girlslovesbl2.jpeg" alt="" class="bottom-image">
+                <div id="bottom-images">
+                    <img src="assets/images/girlslovesbl.jpg" alt="" class="bottom-image">
+                    <img src="assets/images/girlslovesbl1.jpeg" alt="" class="bottom-image">
+                    <img src="assets/images/girlslovesbl2.jpeg" alt="" class="bottom-image">
+                </div>
             </div>
             <div class="tshirt-info">
-                <h1 id="tshirt-name">GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL</h1>
-                <h1 id="cijena">25&euro;</h1>
-                <ul>
+                <div class="name-price-container">
+                    <h1 id="tshirt-name">GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL</h1>
+                    <h1 id="price">25&euro;</h1>
+                </div>
+                <ul class="tshirt-description">
                     <li>185g/m2</li>
                     <li>100% pamuk</li>
                     <li>Kratki rukav</li>
@@ -47,18 +51,23 @@
                 </ul>
 
                 <form class="form-input" action="">
-                    <input type="radio" name="size" id="s">
-                    <label for="s">S</label>
-                    <input type="radio" name="size" id="m">
-                    <label for="m">M</label>
-                    <input type="radio" name="size" id="l">
-                    <label for="L">L</label>
-                    <input type="radio" name="size" id="xl">
-                    <label for="xl">XL</label>
+                    <div class="sizes">
+                        <input type="radio" name="size" id="s">
+                        <label for="s"><span>S</span></label>
+                        
+                        <input type="radio" name="size" id="m">
+                        <label for="m"><span>M</span></label>
+                        
+                        <input type="radio" name="size" id="l">
+                        <label for="l"><span>L</span></label>
+                        
+                        <input type="radio" name="size" id="xl">
+                        <label for="xl"><span>XL</span></label>
+                    </div>
 
-                    <input type="submit" value="DODAJ U KOŠARICU">
+                    <input type="submit" value="DODAJ U KOŠARICU" class="login-signup-button">
+
                 </form>
-
             </div>
             
         </div>

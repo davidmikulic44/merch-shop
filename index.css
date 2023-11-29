@@ -273,45 +273,6 @@ footer {
     max-width: 1920px;
 }
 
-@media screen and (max-width: 1000px) {
-    footer {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        padding-bottom: 10px;
-        height: auto;
-        padding-bottom: 50px;
-    }
-
-    .collection {
-        text-align: center;
-        justify-content: center;
-        margin: auto;
-        align-items: center;
-    }
-
-    .collection-title {
-        padding-bottom: 20px;
-        width: fit-content;
-        padding: 7px;
-        background-color: white;
-        color: black;
-        margin-left: -50px;
-        margin-right: 20px;
-    }
-
-    .collection-tshirt {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        
-    }
-
-    .videos-container{
-        height: 300px;
-    }
-}
-
 .footer-links {
     display: flex;
     flex-direction: row;
@@ -365,3 +326,43 @@ footer {
 .footer-text {
     font-size: 16px;
 }
+
+@media screen and (max-width: 1000px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding-bottom: 10px;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .collection {
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        align-items: center;
+    }
+
+    .collection-title {
+        padding-bottom: 20px;
+        width: fit-content;
+        padding: 7px;
+        background-color: white;
+        color: black;
+        margin-left: -50px;
+        margin-right: 20px;
+    }
+
+    .collection-tshirt {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+    }
+
+    .videos-container{
+        height: 300px;
+    }
+}
+

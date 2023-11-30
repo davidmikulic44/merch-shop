@@ -212,6 +212,11 @@ footer {
 
 .bottom-image.active {
     opacity: 1;
+    cursor: not-allowed;
+}
+
+.bottom-image.active:hover {
+    animation: none;
 }
 
 .bottom-image:hover {
@@ -341,10 +346,12 @@ body.modal-open {
 .sizes input[type="radio"]:checked + label::before {
     background-color: #000; /* Selected background */
     border: 3px solid #5DFF54; /* Selected border */
+    cursor: not-allowed;
 }
 
 .sizes input[type="radio"]:checked + label span {
     color: #fff; /* Selected text color */
+    cursor: not-allowed;
 }
 
 .name-price-container {

@@ -22,8 +22,6 @@ function replaceImage(clickedImage) {
             firstChild.style.opacity = '0.6';
         }
     });
-
-    // Add 'active' class to the clicked bottom image
     clickedImage.classList.add('active');
 }
 function openModal() {

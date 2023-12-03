@@ -1,0 +1,29 @@
+@import '../base/animations';
+
+.scrolling-text{
+    width: 100%;
+    overflow: hidden;
+    height: 44px;
+}
+
+#scrolling-text {
+    width: 400%;
+    display: flex;
+    z-index: 15;
+    bottom: 44px;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 44px;
+    animation: RightToLeft 30s infinite linear;
+    @include text-style-scrolling;
+}
+
+.scroller-background {
+    background-color: $yellow-dim;
+    opacity: 0.5;
+    height: 44px;
+    font-size: 30px;
+    
+}

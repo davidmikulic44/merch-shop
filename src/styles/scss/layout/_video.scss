@@ -1,0 +1,21 @@
+
+.videos-container {
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    z-index: -10;
+}
+
+
+.videos {
+    object-fit: cover;
+    position: fixed;
+    z-index: -11;
+    overflow: hidden;
+    max-width: 1920px;
+    width: 100%;
+    height: inherit;
+}
+

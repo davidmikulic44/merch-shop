@@ -1,0 +1,31 @@
+.spotify-link {
+    width: fit-content;
+    height: 88px;
+    background-color: $gray-dark;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+
+}
+
+.spotify-image {
+    height: 64px;
+    width: auto;
+}
+
+.spotify-title {
+    font-size: 20px;    
+}
+
+.spotify-description {
+    color: $gray-light;
+    font-size:  10px;
+    font-weight: 400;
+    font-style: italic;
+}

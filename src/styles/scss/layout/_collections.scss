@@ -1,0 +1,32 @@
+@import '../components/tshirt-article';
+@import '../base/colors';
+@import '../base/animations';
+@import '../base/fonts';
+@import '../base/green-icon';
+@import '../base/mixins';
+
+.collections-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: $background-primary;
+}
+
+.collection-title {
+    padding-bottom: 20px;
+    width: fit-content;
+    padding: 7px;
+    background-color: $foreground-primary;
+    color: $background-primary;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.collection-tshirt {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 20px;
+    padding-left: 20px;
+}

@@ -1,0 +1,33 @@
+@import '../components/_spotify-link';
+@import '../components/_social-links';
+
+footer {
+    background-color: $background-primary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 172px;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 1920px;
+
+    @media screen and (max-width: 1000px){
+        flex-direction: column;
+        gap: 50px;
+        padding-bottom: 10px;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-text {
+    font-size: 16px;
+}

@@ -1,0 +1,28 @@
+@mixin button-style {
+    padding: 10px;
+    font-weight: 700;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    transition: 0.2s linear;
+  }
+}
+
+@mixin button-style-special {
+    
+}
+
+@mixin text-style-scrolling {
+  font-family: $font-secondary;
+  color: $green-light;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+@mixin size-style {
+
+}

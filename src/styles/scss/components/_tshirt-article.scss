@@ -1,0 +1,66 @@
+.tshirt {
+    object-fit: cover;
+    width:360px;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $gray-dark;
+    border-radius: 10px;
+    margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+    &:hover {
+        transform: scale(1.05);
+        transition: 0.3s ease-in-out;
+        background-color: $foreground-primary;
+        color: $background-primary;
+        filter: drop-shadow(0px -1px 16px $gray-light);
+    }
+
+    &:hover .price {
+        border: 2px solid $background-primary;
+        transition: 0.1s ease-in-out;
+    }
+
+    &:not(hover) {
+        transform: scale(1);
+        transition: 0.1s ease-in-out;
+    }
+}
+
+.tshirt-image {
+    object-fit: cover;
+    width: 320px;
+    height: 408px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.price {
+    background-color: white;
+    color: black;
+    padding: 4px;
+    font-size: 20px;
+    border-radius: 5px;
+    
+    width: fit-content;
+    z-index: 10;
+    padding: 5px;
+}
+
+
+.tshirt-title {
+    font-size: 25px;
+}
+
+.price-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: inherit;
+    align-items: center;
+    padding-top: 10px;
+}

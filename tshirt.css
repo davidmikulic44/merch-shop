@@ -1,35 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;700&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-::-moz-selection, ::selection { /* Code for Firefox */
-    color: white;
-    background: #079100;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-body {
-    height: 100%;
-    width: 100%;
-    max-width: 1920px;
-    font-family: 'Inter', 'sans-serif';
-    background-color: black;
-    color: white;
-    max-width: 100%;
-    margin: 0;
-}
-
-p {
-    font-family: 'Courier Prime', 'sans-serif';
-}
-
 .container {
     display: flex;
     flex-direction: column;

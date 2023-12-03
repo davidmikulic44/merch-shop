@@ -1,8 +1,17 @@
-@import 'base/_fonts';
-@import 'base/_colors';
-@import 'base/_mixins';
-@import 'layout/_header';
-@import 'base/_green-icon';
+@import 'base/fonts';
+@import 'base/colors';
+@import 'base/mixins';
+@import 'layout/header';
+@import 'base/green-icon';
+@import 'layout/container';
+@import 'base/animations';
+@import 'base/green-icon';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/video';
+@import 'layout/collections';
+@import 'layout/container';
+@import 'layout/moving-text';
 
 * {
     margin: 0;

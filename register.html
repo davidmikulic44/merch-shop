@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="src/styles/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/a88ff6df1f.js" crossorigin="anonymous"></script><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +10,24 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <header>
             <h1 class="header-title">
                 <a href="index.html">
                 GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL
                 </a>
             </h1>
-            <div class="login-register">
+            <div class="header-user-actions">
+                <div class="cart">
+                    <a href="cart.html" class="header-action-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
                 <div class="login">
-                    <a href="login.html" class="login-register-text">LOGIN</a>
+                    <a href="login.html" class="header-action-btn">LOGIN</a>
                 </div>
                 <div class="register">
-                    <a href="register.html" class="login-register-text">REGISTER</a>
+                    <a href="register.html" class="header-action-btn">REGISTER</a>
                 </div>
             </div>
-        </div>
+        </header>
         
         <form class="login-wrapper">
             <h1>Welcome, create an account!</h1>

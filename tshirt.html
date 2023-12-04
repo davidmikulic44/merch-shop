@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles/css/main.css">
-    <link rel="stylesheet" href="tshirt.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/a88ff6df1f.js" crossorigin="anonymous"></script><meta charset="UTF-8">
     <title>t shirt name</title>
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <header>
             <h1 class="header-title">
                 <a href="index.html">
                 GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL
                 </a>
             </h1>
-            <div class="login-register">
+            <div class="header-user-actions">
                 <div class="cart">
-                    <a href="cart.html" class="login-register-text"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="cart.html" class="header-action-btn"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
                 <div class="login">
-                    <a href="login.html" class="login-register-text">LOGIN</a>
+                    <a href="login.html" class="header-action-btn">LOGIN</a>
                 </div>
                 <div class="register">
-                    <a href="register.html" class="login-register-text">REGISTER</a>
+                    <a href="register.html" class="header-action-btn">REGISTER</a>
                 </div>
             </div>
-        </div>
+        </header>
 
         <div class="tshirt-container">
             <div class="tshirt-images">
@@ -77,7 +76,7 @@
                         <label for="xl"><span>XL</span></label>
                     </div>
 
-                    <input type="submit" value="DODAJ U KOŠARICU" class="login-signup-button">
+                    <input type="submit" value="DODAJ U KOŠARICU" class="add-to-cart-btn">
 
                 </form>
             </div>
@@ -98,14 +97,14 @@
             <div class="spotify-link">
                 <img class="spotify-image" src="assets/images/spotify.jpg" alt="spotify image">
                 <div class="spotify-text">
-                    <h1 class="spotify-title">Random pjesma</h1>
-                    <h1 class="spotify-description">Listen on Spotify</h1>
+                    <h1 class="spotify-title">Loading...</h1>
+                    <h1 class="spotify-description"></h1>
                 </div>
             </div>
 
         </footer>
     </div>
-
+    <script src="spotify.js"></script>
     <script src="tshirt.js"></script>
 </body>
 </html>

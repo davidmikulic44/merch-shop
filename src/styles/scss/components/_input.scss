@@ -1,4 +1,5 @@
 @import '../base/animations';
+@import '../base/colors';
 
 label {
     font-size: 36px;
@@ -19,4 +20,35 @@ input {
     border-radius: 10px;
     padding: 0 10px;
     transition: all $animation-main-duration ease;
+}
+.form-input {
+    position: relative;
+}
+
+.input {
+    &:focus {
+        text-align: left;
+        transition: 0.1s ease;
+        color: $foreground-primary;
+        border-color: $green-primary;
+    }
+
+    &:focus ~ .form-label {
+        font-size: 14px;
+        bottom: 55px;
+        z-index: 30;
+    }
+
+    &:not(:placeholder-shown) ~ .form-label {
+        font-size: 14px;
+        bottom: 55px;
+        z-index: 30;
+    }
+}
+
+.form-input {
+    &:hover input {
+        border-color: $green-light;
+    }
+    
 }

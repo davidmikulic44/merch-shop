@@ -1,3 +1,5 @@
+@import 'animations';
+
 @mixin button-style {
     padding: 10px;
     font-weight: 700;
@@ -6,11 +8,39 @@
     background-color: white;
     color: black;
     transition: 0.2s linear;
+    cursor: pointer;
   }
 }
 
 @mixin button-style-special {
-    
+  width: fit-content;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid $green-light;
+  background: $green-primary; 
+  color: $background-primary;
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-self: flex-start;
+  transition: all $animation-main-duration ease-in-out;
+
+  &:hover {
+    background-color: $background-primary;
+    border: 2px solid $green-primary;
+    color: $foreground-primary;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $green-light;
+    border: 2px solid $green-primary;
+    color: $background-primary;
+    transition: $animation-main-duration;
+  }
 }
 
 @mixin text-style-scrolling {

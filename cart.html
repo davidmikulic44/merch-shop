@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="src/styles/css/main.css">
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/a88ff6df1f.js" crossorigin="anonymous"></script><meta charset="UTF-8">
@@ -32,7 +33,7 @@
             <div class="cart-wrapper">
                 <article class="item">
                     <div class="item-container">
-                        <img src="assets/images/girlslovesbl.jpg" class="cart-item" alt="">
+                        <img src="assets/images/girlslovesbl.jpg" class="cart-item-img" alt="">
                         <div class="item-info">
                             <h1 class="item-name">GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL</h1>
                             <h1 class="item-size">Size L</h1>
@@ -40,12 +41,12 @@
                         </div>
                     </div>
                     <div class="remove-item">
-                        <span class="close-btn"><i class="fas fa-window-close"></i></span>
+                        <span class="remove-btn"><i class="fas fa-window-remove"></i></span>
                     </div>
                 </article>
                 <article class="item">
                     <div class="item-container">
-                        <img src="assets/images/girlslovesbl.jpg" class="cart-item" alt="">
+                        <img src="assets/images/girlslovesbl.jpg" class="cart-item-img" alt="">
                         <div class="item-info">
                             <h1 class="item-name">GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL</h1>
                             <h1 class="item-size">Size L</h1>
@@ -53,12 +54,12 @@
                         </div>
                     </div>
                     <div class="remove-item">
-                        <span class="close-btn"><i class="fas fa-window-close"></i></span>
+                        <span class="remove-btn"><i class="fas fa-window-remove"></i></span>
                     </div>
                 </article>
                 <article class="item">
                     <div class="item-container">
-                        <img src="assets/images/girlslovesbl.jpg" class="cart-item" alt="">
+                        <img src="assets/images/girlslovesbl.jpg" class="cart-item-img" alt="">
                         <div class="item-info">
                             <h1 class="item-name">GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL</h1>
                             <h1 class="item-size">Size L</h1>
@@ -66,7 +67,7 @@
                         </div>
                     </div>
                     <div class="remove-item">
-                        <span class="close-btn"><i class="fas fa-window-close"></i></span>
+                        <span class="remove-btn"><i class="fas fa-window-remove"></i></span>
                     </div>
                 </article>
             </div>
@@ -75,7 +76,7 @@
                     <h1 class="item-size">Total:</h1>
                     <h1 class="price" id="price-total">75&euro;</h1>
                 </div>
-                <input type="submit" value="IDI NA NAPLATU" class="login-signup-button">
+                <input type="submit" value="PAY NOW" class="login-signup-button">
 
             </div>
         </div>
@@ -94,12 +95,13 @@
             <div class="spotify-link">
                 <img class="spotify-image" src="assets/images/spotify.jpg" alt="spotify image">
                 <div class="spotify-text">
-                    <h1 class="spotify-title">Random pjesma</h1>
-                    <h1 class="spotify-description">Listen on Spotify</h1>
+                    <h1 class="spotify-title">Loading...</h1>
+                    <h1 class="spotify-description"></h1>
                 </div>
             </div>
 
         </footer>
     </div>
+    <script src="spotify.js"></script>
 </body>
 </html>

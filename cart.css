@@ -216,7 +216,7 @@ footer {
     background-color: #2a2a2a;
 }
 
-.cart-item {
+.cart-item-img {
     width: 100px;
     
 }
@@ -224,7 +224,6 @@ footer {
 .item-info {
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 .price {
@@ -241,7 +240,6 @@ footer {
 .item-container {
     display: flex;
     flex-direction: row;
-    min-width: 300px;
     gap: 30px;
 }
 
@@ -268,18 +266,8 @@ footer {
     }
 }
 
-.close-btn {
-    font-size:30px;
-    color: #d2d2d2;
-}
 
 
-
-.close-btn:hover {
-    color: white;
-    animation: BigToSmall 0.2s;
-    cursor: pointer;
-}
 
 
 @media screen and (max-width: 1000px) {

@@ -1,0 +1,69 @@
+@import '../base/animations';
+
+.item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: $gray-dark;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 30px;
+    gap: 10px;
+
+    &:hover {
+        background-color: #2a2a2a;
+    }
+}
+
+
+.cart-item-img {
+    width: 100px;
+    
+}
+
+.item-info {
+    justify-content: center;
+    align-items: center;
+}
+
+.price {
+    background-color: $foreground-primary;
+    color: $background-primary;
+    padding: 4px;
+    width: fit-content;
+    z-index: 10;
+    padding: 5px;
+    font-size: 25px;
+    align-self: right;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.item-name {
+    text-wrap: nowrap;
+}
+
+.item-size {
+    color: $gray-light;
+    font-size:  16px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+.remove-btn {
+    font-size:30px;
+    color: $gray-light;
+    width: auto;
+
+    &:hover {
+        color: $foreground-primary;
+        animation: BigToSmall 0.2s;
+        cursor: pointer;
+    }
+}

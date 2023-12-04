@@ -1,0 +1,178 @@
+@import '../base/animations';
+@import '../base/mixins';
+@import '../base/colors';
+@import '../components/modal';
+
+.tshirt-container {
+    padding: 30px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap: 50px;
+    max-width: 80%;
+    margin: 100px auto;
+    height: 900px;
+}
+
+.tshirt-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+#bottom-images {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#front-image {
+    height: 500px;
+    border-radius: 10px;
+    width: 400px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.bottom-image {
+    height: 100px;
+    object-fit: cover;
+    width: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all $animation-main-duration ease-in-out;
+
+
+    &:hover {
+        opacity: 1;
+        animation: BigToSmall $animation-main-duration;
+    }
+
+}
+
+.bottom-image.active {
+    opacity: 1;
+    cursor: not-allowed;
+
+    &:hover {
+        animation: none;
+    }
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.tshirt-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 40px;
+    align-self: first baseline;
+}
+
+.sizes {
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    gap: 50px;
+}
+
+.sizes input[type="radio"] {
+    display: none;
+}
+
+.sizes label {
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.sizes label::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff; /* Default border */
+    background-color: #d9d9d9; /* Default background */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -42%);
+    transition: all 0.1s ease-in-out;
+}
+
+.sizes label span {
+    position: relative;
+    z-index: 1;
+    color: #000; /* Default text color */
+    transition: color 0.2s ease-in-out;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Hover styles */
+.sizes label:hover::before {
+    background-color: #000; /* Hover background */
+    border: 2px solid #d9d9d9; /* Hover border */
+}
+
+.sizes label:hover span {
+    color: #fff; /* Hover text color */
+}
+
+/* Selected styles */
+.sizes input[type="radio"]:checked + label::before {
+    background-color: #000; /* Selected background */
+    border: 3px solid #5DFF54; /* Selected border */
+    cursor: not-allowed;
+}
+
+.sizes input[type="radio"]:checked + label span {
+    color: #fff; /* Selected text color */
+    cursor: not-allowed;
+}
+
+.name-price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#price {
+    background-color: white;
+    color: black;
+    padding: 4px;
+    width: fit-content;
+    z-index: 10;
+    padding: 5px;
+    font-size: 40px;
+}
+
+#tshirt-name {
+    font-size: 40px;
+}
+
+.tshirt-description {
+    margin-left: 20px;
+}
+
+.tshirt-description li {
+    font-size: 23px;
+    padding: 5px 0px 5px 0px;
+}
+
+.add-to-cart-btn {
+    @include button-style-special;
+}

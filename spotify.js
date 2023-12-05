@@ -1,6 +1,7 @@
+
 const APIController = (function() {
     const clientId = '4510188a46c34c11877d9facbebdc055';
-    const clientSecret = 'e6c1fd85453d4db09378db3f3a3a2f6d';
+    const clientSecret ='3faa45da419241f1bb8f14179b22f2a7';
 
     const _getToken = async () => {
         try {
@@ -51,7 +52,8 @@ const APIController = (function() {
                 let artist = randomTrack.artists[i].name;
                 if(i == 0) {
                     artists = artist;
-                } else {
+                } 
+                else {
                     artists = artists + ", " + artist;
                 }
             }

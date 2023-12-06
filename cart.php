@@ -56,42 +56,7 @@ if(isset($_POST['remove-item'])){
 </head>
 <body>
     <div class="container">
-    <header>
-            <h1 class="header-title">
-                <a href="index.php">
-                GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL
-                </a>
-            </h1>
-            <div class="header-user-actions">
-                <div class="cart">
-                    <a href="cart.php" class="header-action-btn"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-
-                <?php
-                    $user_id = $_SESSION['ID'];
-                    $query = mysqli_query($conn, 'SELECT username FROM user WHERE ID = "'.$user_id.'"');
-                    $row = mysqli_fetch_array($query);
-
-                    if(strlen($_SESSION['ID']) != 0){
-                        echo '<div class="login">';
-                        echo $row['username'];
-                        echo '</div>';
-                        echo '<div class="login">';
-                        echo '<a class="header-action-btn" href="src/php/logout.php">LOGOUT</a>';
-                        echo '</div>';
-                    }
-                    else {
-                        echo '<div class="login">';
-                        echo '<a href="login.php" class="header-action-btn">LOGIN</a>';
-                        echo '</div>';
-                        echo '<div class="register">';
-                        echo '<a href="register.php" class="header-action-btn">REGISTER</a>';
-                        echo '</div>';
-                    }
-                ?>
-                
-            </div>
-        </header>
+    <?php include 'src/php/header.php'; ?>
         <div class="cart-container">
             <div class="cart-wrapper">
 
@@ -185,27 +150,7 @@ if(isset($_POST['remove-item'])){
             ?>
             </div>
         </div>
-        <footer>
-            <div class="footer-links">
-                <a href="https://instagram.com/sbl022">
-                    <img src="assets/images/instagram.png" class="image-link" alt="instagram link">
-                </a>
-                <a href="https://www.youtube.com/@SBLici">
-                    <img src="assets/images/youtube.png" class="image-link" alt="youtube link">
-                </a>
-            </div>
-
-            <h1 class="footer-text">SBL ® 2023</h1>
-
-            <div class="spotify-link">
-                <img class="spotify-image" src="assets/images/spotify.jpg" alt="spotify image">
-                <div class="spotify-text">
-                    <h1 class="spotify-title">Loading...</h1>
-                    <h1 class="spotify-description"></h1>
-                </div>
-            </div>
-
-        </footer>
+        <?php include 'src/php/footer.php'; ?>
     </div>
     <script type="module" src="spotify.js"></script>
 </body>

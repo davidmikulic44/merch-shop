@@ -1,8 +1,7 @@
+import { clientId, clientSecret } from './keys.js';
+
 
 const APIController = (function() {
-    const clientId = '4510188a46c34c11877d9facbebdc055';
-    const clientSecret ='3faa45da419241f1bb8f14179b22f2a7';
-
     const _getToken = async () => {
         try {
             const result = await fetch('https://accounts.spotify.com/api/token', {
@@ -52,8 +51,7 @@ const APIController = (function() {
                 let artist = randomTrack.artists[i].name;
                 if(i == 0) {
                     artists = artist;
-                } 
-                else {
+                } else {
                     artists = artists + ", " + artist;
                 }
             }

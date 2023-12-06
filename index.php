@@ -1,3 +1,15 @@
+<?php
+session_start();
+error_reporting(0);
+include("src/php/connection.php"); 
+
+$sql = "SELECT * FROM item";
+$result = $conn->query($sql);
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,27 +18,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/a88ff6df1f.js" crossorigin="anonymous"></script><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIRLS &#9829; SBL</title>
+    <title>SBL WEB SHOP</title>
     
 </head>
 <body>
     <div class="container">
         <header>
             <h1 class="header-title">
-                <a href="index.html">
+                <a href="index.php">
                 GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL
                 </a>
             </h1>
             <div class="header-user-actions">
                 <div class="cart">
-                    <a href="cart.html" class="header-action-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="cart.php" class="header-action-btn"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
-                <div class="login">
-                    <a href="login.html" class="header-action-btn">LOGIN</a>
-                </div>
-                <div class="register">
-                    <a href="register.html" class="header-action-btn">REGISTER</a>
-                </div>
+
+                <?php
+                    $user_id = $_SESSION['ID'];
+                    $query = mysqli_query($conn, 'SELECT username FROM user WHERE ID = "'.$user_id.'"');
+                    $row = mysqli_fetch_array($query);
+
+                    if(strlen($_SESSION['ID']) != 0){
+                        echo '<div class="login">';
+                        echo $row['username'];
+                        echo '</div>';
+                        echo '<div class="login">';
+                        echo '<a class="header-action-btn" href="src/php/logout.php">LOGOUT</a>';
+                        echo '</div>';
+                    }
+                    else {
+                        echo '<div class="login">';
+                        echo '<a href="login.php" class="header-action-btn">LOGIN</a>';
+                        echo '</div>';
+                        echo '<div class="register">';
+                        echo '<a href="register.php" class="header-action-btn">REGISTER</a>';
+                        echo '</div>';
+                    }
+                ?>
+                
             </div>
         </header>
         <article class="videos-container">
@@ -46,41 +76,32 @@
     
             <h1 class="collection-title">GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL COLLECTION</h1>
             <div class="collection-tshirt">
-                <a href="tshirt.html">
-                    <article class="tshirt">    
-                        <img class="tshirt-image" src="assets/images/girlslovesbl.jpg">
-                        <div class="price-wrapper">
-                        <h1 class="tshirt-title">GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL</h1>
-                        <div class="price">
-                            <h1>25&euro;</h1>
-                        </div>
-                    </div>
-                    </article>
-                </a>
 
-                <a href="tshirt.html">
-                    <article class="tshirt">    
-                        <img class="tshirt-image" src="assets/images/girlslovesbl.jpg">
-                        <div class="price-wrapper">
-                        <h1 class="tshirt-title">GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL</h1>
-                        <div class="price">
-                            <h1>25&euro;</h1>
-                        </div>
-                    </div>
-                    </article>
-                </a>
+            <?php
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $imageString=$row['images'];
+                            $imageArray = explode(',', $imageString);
+                            $firstImage = $imageArray[0];
+                            echo '<a href="tshirt.php?ID=' . $row['ID'] . '">';
+                            echo '<article class="tshirt">';
+                            echo '<img class="tshirt-image" src=' . $firstImage. '>';
+                            echo '<div class="price-wrapper">';
+                            echo '<h1 class="tshirt-title">'.$row['name'].'</h1>';
+                            echo '<div class="price"><h1>'.$row['price'].'&euro;</h1></div>';
+                            echo '</div>';
+                            echo '</article>';
+                            echo '</a>';
+                           
 
-                <a href="tshirt.html">
-                    <article class="tshirt">    
-                        <img class="tshirt-image" src="assets/images/girlslovesbl.jpg">
-                        <div class="price-wrapper">
-                        <h1 class="tshirt-title">GIRLS <i class="fa-solid fa-heart green-icon"></i> SBL</h1>
-                        <div class="price">
-                            <h1>25&euro;</h1>
-                        </div>
-                    </div>
-                    </article>
-                </a>
+                        }
+                    } else {
+                        echo '<h1 class="tshirt-title">Nema majici</h1>';
+                    }
+
+                    $conn->close();
+                    ?>
+
             </div>
         </section>
     
@@ -106,5 +127,6 @@
         </footer>
     </div>
     <script type="module" src="spotify.js"></script>
+    <script type="module" src="dynamicLoader.js"></script>
 </body>
 </html>

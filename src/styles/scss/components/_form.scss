@@ -2,7 +2,6 @@
 @import '../base/mixins';
 @import '../base/colors';
 form{
-    height: 620px;
     background-color: $background-primary;
     overflow: hidden;
     padding: 50px 35px;
@@ -53,7 +52,7 @@ form{
     display: flex;
     flex-direction: column;
     z-index: 110;
-    margin-top: 100px;
+    margin-top: 90px;
     gap: 50px;
     justify-content: center;
     align-items: center;

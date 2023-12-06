@@ -10,8 +10,13 @@
     margin: 20px;
     border-radius: 30px;
     gap: 10px;
+    min-width: 300px;
 
     &:hover {
+        background-color: #2a2a2a;
+    }
+
+    &:hover .cart-form {
         background-color: #2a2a2a;
     }
 }
@@ -23,8 +28,9 @@
 }
 
 .item-info {
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .price {
@@ -42,6 +48,7 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
+    width: 600px;
 }
 
 .item-name {
@@ -65,5 +72,15 @@
         color: $foreground-primary;
         animation: BigToSmall 0.2s;
         cursor: pointer;
+    }
+}
+
+#price-total {
+    font-size: 35px;
+}
+
+@media screen and (max-width: 1000px) { 
+    .cart-payment {
+        margin-top: 10px;
     }
 }

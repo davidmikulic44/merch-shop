@@ -51,7 +51,7 @@ if(isset($_POST['remove-item'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/a88ff6df1f.js" crossorigin="anonymous"></script><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja košarica</title>
+    <title>My cart</title>
     
 </head>
 <body>
@@ -59,7 +59,6 @@ if(isset($_POST['remove-item'])){
     <?php include 'src/php/header.php'; ?>
         <div class="cart-container">
             <div class="cart-wrapper">
-
                 <?php
                     if($loggedIn){
                         $query = mysqli_query($conn, 'select ID, cost from cart where user_ID = '. $user_id . ' and is_paid = 0');
